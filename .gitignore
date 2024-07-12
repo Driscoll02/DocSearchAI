@@ -1,0 +1,11 @@
+# Ignore node_modules in all subdirectories
+node_modules/
+
+# Ignore all .env files
+.env*
+
+# ignore local env files
+.env.local
+
+# Ignore a specific env file in a subdirectory
+backend/env
