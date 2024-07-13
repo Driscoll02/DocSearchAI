@@ -1,7 +1,12 @@
 import "./App.css";
 import QueryInputField from "./components/query-input-field";
 
-function App() {
+/**
+ * The main App component of the project. This is the entry point for the React tree.
+ * Renders the QueryInputField component.
+ * @returns {JSX.Element}
+ */
+function App(): JSX.Element {
   return (
     <>
       <h1>DocSearchAI</h1>

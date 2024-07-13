@@ -1,6 +1,10 @@
 import { FormEvent, useState } from "react";
 
-const QueryInputField = () => {
+/**
+ * A component which handles submitting the users query to the Python backend.
+ * @returns {JSX.Element}
+ */
+const QueryInputField = (): JSX.Element => {
   const [userInput, setUserInput] = useState("");
 
   const handleSubmit = (e: FormEvent) => {

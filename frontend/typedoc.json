@@ -1,0 +1,5 @@
+{
+  // Comments are supported, like tsconfig.json
+  "entryPoints": ["src/App.tsx", "src/components/query-input-field/index.tsx"],
+  "out": "docs"
+}
