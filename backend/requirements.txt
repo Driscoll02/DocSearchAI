@@ -1,4 +1,6 @@
 langchain
+lagchain-community
 langchain-google-genai
 python-dotenv
 fastapi
+pypdf

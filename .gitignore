@@ -8,4 +8,4 @@ node_modules/
 .env.local
 
 # Ignore a specific env file in a subdirectory
-backend/env
+backend/.venv
