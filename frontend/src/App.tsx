@@ -1,4 +1,6 @@
+import { LLMResponseProvider } from "./_context/LLMResponseProvider";
 import "./App.css";
+import LLMResponse from "./components/llm-response";
 import QueryInputField from "./components/query-input-field";
 
 /**
@@ -8,13 +10,22 @@ import QueryInputField from "./components/query-input-field";
  */
 function App(): JSX.Element {
   return (
-    <>
-      <h1>DocSearchAI</h1>
-      <p>A tool for retrieving documentation using natural language</p>
-      <div className="flex gap-3">
-        <QueryInputField />
+    <div className="flex flex-col justify-between items-center">
+      <div>
+        <h1>DocSearchAI</h1>
+        <p>A tool for retrieving documentation using natural language</p>
       </div>
-    </>
+      <div>
+        <LLMResponseProvider>
+          <div className="flex gap-3">
+            <QueryInputField />
+          </div>
+          <div className="flex gap-3">
+            <LLMResponse />
+          </div>
+        </LLMResponseProvider>
+      </div>
+    </div>
   );
 }
 
