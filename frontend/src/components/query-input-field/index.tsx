@@ -17,6 +17,7 @@ const QueryInputField = (): JSX.Element | null => {
 
     if (userInput.trim().length === 0) {
       alert("Your input cannot be empty");
+      setIsLoading(false);
       return;
     }
 
