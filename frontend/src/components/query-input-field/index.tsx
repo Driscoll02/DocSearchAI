@@ -13,13 +13,12 @@ const QueryInputField = (): JSX.Element | null => {
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault();
 
-    setIsLoading(true);
-
     if (userInput.trim().length === 0) {
       alert("Your input cannot be empty");
-      setIsLoading(false);
       return;
     }
+
+    setIsLoading(true);
 
     const invokeLLMUrl = import.meta.env.VITE_INVOKE_LLM_URL;
 
@@ -28,7 +27,7 @@ const QueryInputField = (): JSX.Element | null => {
         "Backend POST url is missing from your environment variables."
       );
 
-    const response = await fetch(invokeLLMUrl, {
+    const response = await fetch(`${invokeLLMUrl}/invokeLLM`, {
       method: "POST",
       headers: {
         "Content-Type": "text/plain",

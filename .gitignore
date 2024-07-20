@@ -9,3 +9,8 @@ node_modules/
 
 # Ignore a specific env file in a subdirectory
 backend/.venv
+
+# Ignore auto generated Python files
+backend/__pycache__
+*.py[cod]
+*$py.class
